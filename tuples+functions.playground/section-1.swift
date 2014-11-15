@@ -9,7 +9,7 @@
  * MIT license
  */
 
-import Cocoa
+import Foundation
 
 // Protocol just for convenience
 protocol DataStorageProtocol {
