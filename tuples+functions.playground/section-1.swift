@@ -4,7 +4,7 @@
  * SwiftCrunch @ Krakow - Nov 16, 2014
  *
  * Sample code demonstrating how to use tuples to buffer function calls 
- * and related parameters in a queue, processed sequentally
+ * and related parameters in a queue, processed sequentially
  *
  * MIT license
  */
@@ -18,7 +18,8 @@ protocol DataStorageProtocol {
 
 /**
  * Base class implementing the protocol.
- * Note that a concrete class is needed in order to call class methods as curried functions
+ * Note that a concrete class is needed in order to call
+ * class methods as curried functions
  * It doesn't work with a protocol
  */
 class DataStorage : DataStorageProtocol {
@@ -98,9 +99,13 @@ let jsonExporter = JsonExporter()
 
 let storageSerializer = StorageSerializer()
 
-storageSerializer.enqueue(consoleStorage1, date: NSDate(), text: "Test Message", author: "SwiftCrunch")
-storageSerializer.enqueue(consoleStorage2, date: NSDate(), text: "Another Message", author: "Antonio Bello")
-storageSerializer.enqueue(consoleStorage1, date: NSDate(), text: "Hope it's useful", author: "Swift Tuples")
-storageSerializer.enqueue(jsonExporter, date: NSDate(), text: "Json exporter", author: "Me")
+storageSerializer.enqueue(
+    consoleStorage1, date: NSDate(), text: "Test Message", author: "SwiftCrunch")
+storageSerializer.enqueue(
+    consoleStorage2, date: NSDate(), text: "Another Message", author: "Antonio Bello")
+storageSerializer.enqueue(
+    consoleStorage1, date: NSDate(), text: "Hope it's useful", author: "Swift Tuples")
+storageSerializer.enqueue(
+    jsonExporter, date: NSDate(), text: "Json exporter", author: "Me")
 
 storageSerializer.process()
