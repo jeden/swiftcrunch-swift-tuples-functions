@@ -102,7 +102,8 @@ let storageSerializer = StorageSerializer()
 storageSerializer.enqueue(
     consoleStorage1, date: NSDate(), text: "Test Message", author: "SwiftCrunch")
 storageSerializer.enqueue(
-    consoleStorage2, date: NSDate(), text: "Another Message", author: "Antonio Bello")
+    consoleStorage2, date:
+    NSDate(), text: "Another Message", author: "Antonio Bello")
 storageSerializer.enqueue(
     consoleStorage1, date: NSDate(), text: "Hope it's useful", author: "Swift Tuples")
 storageSerializer.enqueue(
